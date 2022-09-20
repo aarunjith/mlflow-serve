@@ -51,11 +51,4 @@ examplemap:
     value: "<AWS Secret acces key here if your artifacts are in s3>"
   - name: "MLFLOW_CONDA_HOME"
     value: "/opt/conda/"
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-
 ```
