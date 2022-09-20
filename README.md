@@ -22,6 +22,7 @@ $ docker buildx build --platform linux/amd64 --push -t <id>.dkr.ecr.us-east-1.am
 ```
 
 **Step 2** : Modify the helm variables
+<br>
 Update [values.yaml](https://github.com/aarunjith/mlflow-serve/blob/main/mlflow-serve/values.yaml) with the docker image name you built. In this case it will sort of look like this
 ```yaml
 replicaCount: 1
