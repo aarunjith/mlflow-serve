@@ -6,6 +6,8 @@
 </tr></table>
 This repo covers the deployment of your MLFLOW models to Kubernetes. We will make use of Helm and Docker to complete the deployment
 
+As seen in the article : [Medium](https://arunjitha.medium.com/serve-mlflow-models-in-kubernetes-auto-deploy-your-production-models-with-ease-50660f6ad0ab)
+
 ## MLFlow Serve Helm Chart
 This repo already contains a Helm Chart created specifically for mlflow serve. In most cases this will be a good starting point. I have made a few changes to templates to accomodate for environment variables.
 
