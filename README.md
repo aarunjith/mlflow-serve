@@ -16,6 +16,10 @@ One could clone this repo and update the environment variables in [values.yaml](
 ```bash
 $ docker build . -t mlflow-serve:latest
 ```
+_OPTIONAL_ : If you want to build and push your images to ECR or any other service for a particular architecture you can use this
+```bash
+$ docker buildx build --platform linux/amd64 --push -t <id>.dkr.ecr.us-east-1.amazonaws.com/mlflow-serving:latest --file Dockerfile .
+```
 
 **Step 2** : Modify the helm variables
 Update [values.yaml](https://github.com/aarunjith/mlflow-serve/blob/main/mlflow-serve/values.yaml) with the docker image name you built. In this case it will sort of look like this
