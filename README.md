@@ -33,3 +33,29 @@ Tag of the image is specified in [Charts.yaml](https://github.com/aarunjith/mlfl
 # It is recommended to use it with quotes.
 appVersion: "latest"
 ```
+Set up environment variables in [values.yaml](https://github.com/aarunjith/mlflow-serve/blob/main/mlflow-serve/values.yaml).
+```yaml
+tolerations: []
+
+affinity: {}
+examplemap:
+  - name: "MLFLOW_TRACKING_URI"
+    value: "<your ml-flow tracking url here>"
+  - name: "SERVING_PORT"
+    value: "80"
+  - name: "MODEL_NAME"
+    value: "<put your model name here>"
+  - name: "AWS_ACCESS_KEY_ID"
+    value: "<AWS Access key here if your artifacts are in s3>"
+  - name: "AWS_SECRET_ACCESS_KEY"
+    value: "<AWS Secret acces key here if your artifacts are in s3>"
+  - name: "MLFLOW_CONDA_HOME"
+    value: "/opt/conda/"
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+
+```
