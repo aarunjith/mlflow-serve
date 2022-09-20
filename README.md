@@ -7,11 +7,11 @@ This repo covers the deployment of your MLFLOW models to Kubernetes. We will mak
 This repo already contains a Helm Chart created specifically for mlflow serve. In most cases this will be a good starting point. I have made a few changes to templates to accomodate for environment variables.
 
 ## How to use
-One could clone this repo and update the environment variables in [values.yaml](https://github.com/aarunjith/mlflow-serve/blob/main/mlflow-serve/values.yaml). If you dont have helm installed [please follow this to install Helm](https://helm.sh/docs/intro/install/). 
+One could clone this repo and update the environment variables in [values.yaml](https://github.com/aarunjith/mlflow-serve/blob/main/mlflow-serve/values.yaml). If you dont have helm installed [please follow this to install Helm](https://helm.sh/docs/intro/install/). These steps assume you have kubectl configured and are able to access it through your CLI. For AWS EKS follow [this](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
 
 **Step 1** : Build the docker image
 ```bash
-docker build . -t mlflow-serve:latest
+$ docker build . -t mlflow-serve:latest
 ```
 
 **Step 2** : Modify the helm variables
@@ -51,4 +51,8 @@ examplemap:
     value: "<AWS Secret acces key here if your artifacts are in s3>"
   - name: "MLFLOW_CONDA_HOME"
     value: "/opt/conda/"
+```
+**Step 3**: Use helm to install 
+```bash
+$ helm install mlflow-serve ./mlflow-serve -n <your k8s namespace>
 ```
