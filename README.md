@@ -14,7 +14,7 @@ One could clone this repo and update the environment variables in [values.yaml](
 
 **Step 2 : Modify the helm variables**
 Update [values.yaml](https://github.com/aarunjith/mlflow-serve/blob/main/mlflow-serve/values.yaml) with the docker image name you built. In this case it will sort of look like this.
-`yaml
+---
 replicaCount: 1
 
 image:
@@ -22,12 +22,12 @@ image:
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
-`
+---
 Tag of the image is specified in [Charts.yaml](https://github.com/aarunjith/mlflow-serve/blob/main/mlflow-serve/Charts.yaml)
-`yaml
+---
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
 appVersion: "latest"
-`
+---
